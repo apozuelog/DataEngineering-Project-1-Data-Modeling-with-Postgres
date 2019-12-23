@@ -4,6 +4,15 @@ import psycopg2
 import pandas as pd
 from sql_queries import *
 
+"""
+    This procedure processes a song file whose filepath has been provided as an arugment.
+    It extracts the song information in order to store it into the songs table.
+    Then it extracts the artist information in order to store it into the artists table.
+
+    INPUTS: 
+    * cur the cursor variable
+    * filepath the file path to the song file
+    """
 
 def process_song_file(cur, filepath):
     # open song file
